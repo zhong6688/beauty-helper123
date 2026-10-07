@@ -1,0 +1,177 @@
+part,row,review_text,label,words,duplicate_of_earlier,flag_text
+DATA_PART1,1,"Product received in good condition. Fast delivery. Serum feels lightweight and non-sticky, absorbs quickly. Skin feels smoother and more hydrated after a few days.",positive,25,False,
+DATA_PART1,2,Hyaluronic serum is for hydration first step after cleanse. Niacinamide serum is after the Hyaluronic. Beginners should avoid using together with Retinol everyday.,positive,23,False,
+DATA_PART1,3,"This serum is my favorite one. After use, it cleared my dullness. This is my third bottle.",positive,17,False,
+DATA_PART1,4,"Fast delivery, well packed. Second time purchasing, works well for my skin and gives consistent results. Will buy again.",positive,19,False,
+DATA_PART1,5,Niacinamide is versatile for healthy glowy skin. Love the fragrance-free and quick absorbing formula. Affordable too.,positive,17,False,
+DATA_PART1,6,"Found the official seller on Shopee. Got it much cheaper than Sephora with vouchers. Fast delivery, ordered yesterday and got it today.",positive,22,False,service_only
+DATA_PART1,7,Definitely worth to buy. Saw improvements on my dark spots. Will order again.,positive,13,False,
+DATA_PART1,8,"2nd purchase. Can see good results, removes dark spots but need to use long time to see results.",positive,18,False,
+DATA_PART1,9,"Use it to clear my acne-prone skin. Result was satisfying, my skin was glowing. Easier to absorb moisturiser after using.",positive,21,False,
+DATA_PART1,10,Fast delivery. Product packaging is good. Been using for a few days and can feel the effects on my skin.,positive,20,False,
+DATA_PART1,11,"Finally tried this after 3 months. Was hesitant due to high strength. Applied on small patch to test, easily absorbed. Will use daily now.",positive,24,False,
+DATA_PART1,12,Introduced this brand to my mum and she loves it. Products are good and cheaper with vouchers. Well-packaged and very fast delivery.,positive,23,False,service_only
+DATA_PART1,13,"Fast delivery, well packed. Trusted brand, first time trying. Convenient to buy online, value for money. Good quality.",positive,18,False,"not_tried, service_only"
+DATA_PART1,14,Super fast delivery! Repeated order. Reduces redness effectively. Acne controlled.,positive,10,False,
+DATA_PART1,15,First time purchase. Product delivered well packed. Seller is reliable. Will try to see if it works.,positive,17,False,not_tried
+DATA_PART1,16,Fast shipping and nicely packed. Always buying from this seller as it is cheaper. Been using this brand for quite some time. All good.,positive,24,False,service_only
+DATA_PART1,17,Great delivery! The Ordinary Niacinamide is my skin's holy water. Highly recommended as a starter product.,positive,16,False,
+DATA_PART1,18,Repeat buy. Nice texture. Good for blemish care. Daily use with hydraulics. Good brand.,positive,14,False,
+DATA_PART1,19,Packaging is superb. Suitable for oily skin.,positive,7,False,
+DATA_PART1,20,"Fast delivery, item received in good condition. Packaging is secure. Product is really useful and worth the price.",positive,18,False,service_only
+DATA_PART1,21,"Used this product in a smaller bottle, soothes pimples. Seller is reliable, sells genuine products.",positive,15,False,authenticity
+DATA_PART1,22,"Excellent for smoother skin and better texture. Use for prolonged period to help with spots, especially for mature skin.",positive,19,False,
+DATA_PART1,23,"Fast delivery, item well packed. Affordable price. Highly recommended.",positive,9,False,service_only
+DATA_PART1,24,"In my 50s, I don't spend on costly anti-ageing. The Ordinary is simple and effective. Ordering for myself and my mum. Very satisfied with products and service.",positive,28,False,
+DATA_PART1,25,Niacinamide is god's gift to my troubled skin. Goes well with BHA too.,positive,13,False,
+DATA_PART2,1,"Product packaging was good but very disappointed with the manufacturing date. The product delivered is more than a year old already, even after ordering from an official store at a higher price.",negative,32,False,"service_only, authenticity"
+DATA_PART2,2,I will not recommend buying this product online. Bottle looks the same but the serum is not. Smells weird. I started to have acne after using once.,negative,27,False,
+DATA_PART2,3,Fake one. Poor quality.,negative,4,False,authenticity
+DATA_PART2,4,Caused outbreak.,negative,2,False,too_short
+DATA_PART2,5,Item not as described. Caused outbreak.,negative,6,False,authenticity
+DATA_PART2,6,Poor response from seller.,negative,4,False,service_only
+DATA_PART2,7,Poor quality.,negative,2,False,too_short
+DATA_PART2,8,"Used for a week now, only made my pimples appear more. Smells like glue after you put it on your face and spread it.",negative,24,False,
+DATA_PART2,9,Poor quality.,negative,2,True,too_short
+DATA_PART2,10,Poor quality.,negative,2,True,too_short
+DATA_PART2,11,Poor quality.,negative,2,True,too_short
+DATA_PART2,12,"Been using The Ordinary Niacinamide 10% + Zinc 1% for about a month now. Haven't seen much visible improvement yet, and it causes pilling when layered with sunscreen.",negative,27,False,
+DATA_PART2,13,"Free gift from Shopee Farm, haven't used it yet so can't comment on how good it is. Won't give 5 stars as it doesn't reflect the true picture.",negative,28,False,"not_tried, service_only"
+DATA_PART2,14,Box has no seal & item comes with manufactured date but no expiry stated. Item is also not sealed. Questioned authenticity and safety.,negative,22,False,"service_only, authenticity"
+DATA_PART2,15,Package delivered with no safety seal. Product may be old stock based on manufacturing date.,negative,15,False,"service_only, authenticity"
+DATA_PART2,16,TO formulation usually causes me to break out. It's cheap but not the best.,negative,14,False,
+DATA_PART2,17,I think I got a bad batch. The color is yellowish compared to my previous purchase which was white. It produces suds when applied and does not sting as it usually does.,negative,32,False,authenticity
+DATA_PART2,18,Apply to face it became white foamy. Not sure if it's spoiled. Never had this issue with other sellers with the same product. Smells funny too.,negative,26,False,
+DATA_PART2,19,Caused outbreak.,negative,2,True,too_short
+DATA_PART2,20,Product not as described. Caused outbreak.,negative,6,False,authenticity
+DATA_PART2,21,Poor quality.,negative,2,True,too_short
+DATA_PART2,22,Poor quality.,negative,2,True,too_short
+DATA_PART2,23,Product on the right is what I received. Product on the left is what I bought from the shop. Look at the colour difference. Seems suspicious.,negative,26,False,"service_only, authenticity"
+DATA_PART2,24,"After using the product for a month, I see no difference in my armpits. Been using it daily and it didn't work for me.",negative,24,False,
+DATA_PART2,25,"It's a scam. Item was damaged, put up return request 5 times was rejected. Shop does not respond to my enquiries. Colour difference is obvious and seller claims it's normal.",negative,30,False,"service_only, authenticity"
+DATA_PART2,26,There are two labels on the item. Not sure why. No response from customer service too.,negative,16,False,service_only
+DATA_PART2,27,Releases a burning sensation when using. Very different from the real product. Do not buy.,negative,15,False,
+DATA_PART2,28,Skin texture like sandpaper. Skin feels scaly like fish.,negative,9,False,
+DATA_PART2,29,Very disappointed with manufacturing date. Product is more than a year old even from official store.,negative,16,False,"service_only, authenticity"
+DATA_PART2,30,Usage Experience: not sure.,negative,4,False,not_tried
+DATA_PART2,31,Poor quality.,negative,2,True,too_short
+DATA_PART2,32,Counterfeit product.,negative,2,False,"too_short, authenticity"
+DATA_PART2,33,Item not as described.,negative,4,False,authenticity
+DATA_PART3,1,Received in good condition. Well packaged. Fast delivery. Order on 05 May received in next day. This product suitable for dry skin. Repeating purchase product.,positive,25,False,
+DATA_PART3,2,"Just tried this face cream for the first time, and I'm excited to see how it works over time. I have super dry skin, so I'm always on the lookout for something that'll really hydrate and nourish my skin. This cream feels rich and luxurious, and it absorbs nicely without feeling greasy. My skin felt soft and moisturised after applying it.",positive,61,False,not_tried
+DATA_PART3,3,Fast delivery and item was securely packaged. I have used up the 50ml that I bought from Unity previously and now getting a bigger bottle 177ml. It is more worth to get the 177ml than 50ml. This cream doesn't irritate my skin and helps with the dryness. good for those with eczema.,positive,52,False,
+DATA_PART3,4,"Great for dry, sensitive, eczema-prone skin. Not always ideal for acne-prone or combo skin. First time buying this product. Hope to see better results.",positive,26,False,not_tried
+DATA_PART3,5,Tried the sample lotion which apparently was quite effective in moisturising my eczema-prone skin. I decided to buy the cream which is more suitable for extremely dry skin. Product arrived in good condition. It was well packaged. Manufactured in Sept 2025.,positive,42,False,authenticity
+DATA_PART3,6,"I have very dry skin on my legs and elbow areas and after applying this cream, the skin is so much smoother. The cream is rich but absorbs really well. It doesn't feel sticky or heavy at all.",positive,38,False,
+DATA_PART3,7,I have very dry rosacea skin that peeled off every day. However since I apply a thicker layer on my face. My skin has stopped peeling.,positive,26,False,
+DATA_PART3,8,This cream produces long lasting hydration to dry skin. It is not oily after application. Value for money as it was on flash sale and the delivery came with some free samples to try.,positive,34,False,
+DATA_PART3,9,"Fast shipping, received item within 2 days. Purchased during sale. Will purchase again. Overall good.",positive,15,False,service_only
+DATA_PART3,10,"Product delivery was fast! Good as I was running very low on moisturizer and really needed it. Did price comparison at a few pharmacies, ordered on Shopee as it happened to have a really good sale price. Product is genuine. Will buy again when there's sale.",positive,46,False,authenticity
+DATA_PART3,11,Well delivered with good packaging. Was packed in a box and seller make sure it not shaky too! Thank you.,positive,20,False,service_only
+DATA_PART3,12,Trying this for the first time after hearing and reading alot of reviews of this. Thank you seller for the quick delivery! Ordered during 8/8 sale and received it on 11/8. Appreciate it!,positive,35,False,"not_tried, service_only"
+DATA_PART3,13,"Quick delivery, item is nicely packed. First time using it, smooth texture, easy to apply. Hope it helps to moisturise dry skin.",positive,22,False,not_tried
+DATA_PART3,14,Well packaged and fast delivery over CNY. Highly rated and I would dearly wanna try for my dry and sensitive skin.,positive,21,False,not_tried
+DATA_PART3,15,"The parcel arrived promptly. Neatly packed. Products seem to be in good order and look authentic. I opened the jar of cream; it looks like the past order, not full to the rim and Cerave doesn't seem to seal this product. Looking forward to using when my other jar is finished.",positive,51,False,"not_tried, service_only, authenticity"
+DATA_PART3,16,"This cream really helps with dry skin. The cream is feel rich and moisturising my dry skin. Fast delivery, item received in good condition.",positive,24,False,
+DATA_PART3,17,"Fast delivery, received within three days. Good packaging. Like that the cream is not sticky after application. Hope this cream can help to moisturise my dry skin and see some improvement.",positive,31,False,not_tried
+DATA_PART3,18,Tried this at friend's h & decided to buy a bottle. Hopefully it's as good as the one tried before.. like the texture with good ingredients.,positive,25,False,not_tried
+DATA_PART3,19,"My 3rd bottle, but first time getting from seller. Fast delivery. Thanks for the free gift. Will definitely buy again from seller.",positive,22,False,service_only
+DATA_PART3,20,"very moisturising, have dry eczema and helps to keep it moisturised for at least 2-3 hrs.",positive,17,False,
+DATA_PART3,21,"I like the texture, not oily even it is very rich and thick. Thank you seller.",positive,16,False,
+DATA_PART3,22,Item is well packed with no damages. Bought it on 4.4 with vouchers and it's cheaper the getting from retail stores. Will definitely get again.,positive,26,False,service_only
+DATA_PART3,23,Very good for dry skin and can be brought along for winter holiday. Second time purchase.,positive,16,False,
+DATA_PART3,24,"The package was received in good condition, this is my 2nd time of purchase since I gave it to my BF the first purchase I have, it helps my dry skin.",positive,31,False,
+DATA_PART3,25,"A clean product as a moisturiser during nursing period, able to hydrate dry skin.",positive,14,False,
+DATA_PART3,26,Tried the smaller tube and decided to get the bigger size after that. A clean product for hydration.,positive,18,False,
+DATA_PART3,27,Fast delivery and well packed. Heard good things about it. Seems to have similar ingredient list as doc prescription. Can't wait to use it.,positive,24,False,"not_tried, service_only"
+DATA_PART3,28,First time buying.. hope it works for my skin.,positive,9,False,not_tried
+DATA_PART3,29,Fast delivery. Items are nicely packed in recyclable material. Very environmentally friendly. Not my first time buying but my first time receiving so many free samples and even a small tote bag. Thanks seller.,positive,34,False,service_only
+DATA_PART3,30,Fast delivery by seller. Well packed. Good discount during campaign period. The product is good and serve its purpose well.,positive,20,False,service_only
+DATA_PART3,31,"Great dealing with store. Item is clearly described like photo and description. Best price in shopee, very fast delivery service. Definitely will purchase more. Thank you.",positive,26,False,service_only
+DATA_PART3,32,Bought this small tube to bring along for a November overseas trip for my kids. Esp for the elder child who has eczema. First time trying. Hope it moisturises his skin well.,positive,32,False,not_tried
+DATA_PART3,33,Very gentle and very moisturizing. Love it. Might be too oily if u have oily skin.,positive,16,False,
+DATA_PART3,34,This is a very good product. It's my 3rd purchase and I highly recommend it. It's suitable for anyone and everyone.,positive,21,False,
+DATA_PART3,35,always a long time fan of cerave. love their moisturisers!,positive,10,False,
+DATA_PART3,36,"Received item in good condition with freebie, this is the best moisturizing cream I have used.",positive,16,False,
+DATA_PART3,37,Well packed & extremely fast delivery - delivered the next day! Have been using Cerave products. Love that it's not scented and absorbs quickly only skin with no sticky feeling.,positive,28,False,
+DATA_PART3,38,I've bought this many many times and it's really good for dry skin.,positive,13,False,
+DATA_PART3,39,Super fast delivery. I ordered yesterday and it was delivered the next day! Moisturiser is great for my skin. Not too oily but moisturising enough.,positive,25,False,
+DATA_PART3,40,"suitable for my skin, able to use, item came delivered in good condition.",positive,13,False,
+DATA_PART3,41,"Cerave is a great brand caters to sensitive, irritated or eczema skin. I have done research on this brand and many others in the msket.",positive,25,False,
+DATA_PART3,42,Well packed in carton box. Fast delivery after ordering.,positive,9,False,service_only
+DATA_PART3,43,Item safely received. Came well packed and protected.,positive,8,False,service_only
+DATA_PART3,44,Saw good reviews so bought 1 to try on my dry and sensitive skin. Hopefully it is as good as reviewed. Quick delivery!,positive,23,False,not_tried
+DATA_PART3,45,My go to moisturizer. Love the formula its great for dry skin and travel friendly packaging.,positive,16,False,
+DATA_PART3,46,thick and rich great for dry skin. Last very long and u will still feel moisturised. Good.,positive,17,False,
+DATA_PART3,47,this cream is easy to apply and no strange smell. I have bad eczema and this is one cream that does not irritate my skin and moisturizes well.,positive,28,False,
+DATA_PART3,48,The cream is smooth and pleasant to the touch. The moisturiser keeps my skin hydrated for hours.,positive,17,False,
+DATA_PART3,49,Delivery is fast.. arrived in 3 days time. Product seems authentic except that there is no seal. Unsure if opened before. Texture of cream appears hydrating. Cost about $32 after voucher. Significantly more costly than cetaphil.,positive,36,False,authenticity
+DATA_PART3,50,"I buying for my pregnant wife, yea it serves it purpose.",positive,11,False,
+DATA_PART3,51,"A nice creamy thick cream, feels very moisturizing and hydrating yet not greasy. Staple face and body cream.",positive,18,False,
+DATA_PART3,52,"Quick delivery and good packaging, first time buying, wanted to see how good it is, bit expensive.",positive,17,False,service_only
+DATA_PART3,53,Bought a smaller tube for travelling. Good for all skin type. thanks seller for fast delivery.,positive,16,False,
+DATA_PART3,54,"Price was very good during 11.11. delivery came within few days upon ordering, and arrived in bubble wrap well packaged. Thank u seller for making the arrangements!",positive,28,False,service_only
+DATA_PART3,55,Great product and shipping was quite fast. Thank you Seller.,positive,10,False,service_only
+DATA_PART3,56,Highly recommended.,positive,2,False,too_short
+DATA_PART3,57,Humongous tub. It is a good bargain. I love the Cerave because the result is instant. It also is friendly to sensitive skin.,positive,23,False,
+DATA_PART3,58,Cream is not sticky and moisturises well. Comfortable to use. Recommended.,positive,11,False,
+DATA_PART3,59,Creamy thick texture good for dry skin. Thick but once you warm it up by rubbing with your palms it works so well as a daily moisturizer. probably not the best for very oily skin but for normal to dry skin it's ideal.,positive,43,False,
+DATA_PART3,60,This moisturiser cream is super good for sensitive n eczema skin.,positive,11,False,
+DATA_PART3,61,"The delivery was fast. I placed the order on Saturday afternoon and received the items on Sunday. It's rare to find such a prompt seller who ships quickly. Overall, a good experience. Thanks for the free item.",positive,37,False,service_only
+DATA_PART3,62,"This CeraVe moisturizing face cream feels lightweight yet very hydrating. It absorbs quickly without leaving my skin greasy. I like that it's gentle, fragrance-free, and suitable for sensitive skin. A reliable, simple moisturizer that keeps my skin comfortable all day.",positive,41,False,
+DATA_PART4,1,Product was anyhow thrown by the delivery guy. See video half lean towards the other size. Also I think the product is not come sealed not sure if it's legit.,negative,30,False,"service_only, authenticity"
+DATA_PART4,2,I thought I would receive one that is made in France or Spain. Quite disappointed to receive one that is made in China from the official store. The smell and consistency is very different from the europe formulations.,negative,38,False,
+DATA_PART4,3,"First time ordering the CeraVe Moisturising cream, find out that's without protector seal?",negative,13,False,authenticity
+DATA_PART4,4,"I dont like this very much. It has a very weird feeling if sweating, and I weirdly sweat after applying this product even after shower on in room with ac.",negative,30,False,
+DATA_PART4,5,I wouldn't buy the items if I knew it's Made in China.,negative,12,False,
+DATA_PART4,6,Disappointed. Not impressed by the product. tried used. don't see much effect. can't seem to do much repair skin.,negative,19,False,
+DATA_PART4,7,Not moisturising enough (if you have very dry skin).,negative,9,False,
+DATA_PART4,8,Product not sealed. Not sure anyone open this before? Thought this is official store will come with at least normal standard.,negative,21,False,"service_only, authenticity"
+DATA_PART4,9,The manufacture date is 25/4/2024 1 year ago!,negative,10,False,authenticity
+DATA_PART4,10,Packaging: item not seal up properly.,negative,6,False,"service_only, authenticity"
+DATA_PART4,11,Item Not as Described.,negative,4,True,authenticity
+DATA_PART4,12,Item Not as Described.,negative,4,True,authenticity
+DATA_PART4,13,Poor quality.,negative,2,True,too_short
+DATA_PART4,14,Delivered incorrect item and when I tried to schedule a pick up for refund no one came to pick up the item and cancelled my refund request and the sellers not responding to my messages as well!,negative,37,False,service_only
+DATA_PART4,15,I received a wrong item. My order is dr althea 345 cream but i received the boosting serum. the delivery took longer than the usual for overseas sellers.,negative,28,False,
+DATA_PART4,16,"got the wrong order. it's supposed to be 345, but i got the 147 instead.",negative,15,False,
+DATA_PART4,17,Broke me out! Didnt know it was france made not the original from korea.,negative,14,False,authenticity
+DATA_PART4,18,"My skin has been using it for 5 days and has a lot of red and red acne, dry skin applying 1 thin layer using the same bottle of mist 345 is really bad huhu.",negative,35,False,
+DATA_PART4,19,I definitely love Dr Althea 345 cream i bought from others shops abroad but my first time buying from this shop. When I opened it I noticed a crack on the neck of the tube but ignored it thinking it should not affect the contents. The first time I spread it on my face I noticed a subtle bad smell and reported it to their customer service they just said it is normal and it is authentic. Another thing I noticed was the odd feeling on my skin and kinda itchy but because of their assurance and badge i just thought maybe the itch was from something I ate but noooooo. The smell and itch on my face is always there every time i use the cream. So it may be authentic but there should be something with this batch of production. i wanted to return/refund it but the process is very hassle for a wfh mom like me. So i am just keeping the defective product and cry for the money I paid. Unless you want return my money.,negative,181,False,authenticity
+DATA_PART4,20,"Sent wrong item. I didn't notice when I peeled it off, so I couldn't return it.",negative,16,False,service_only
+DATA_PART4,21,"I feel like the cream tube is empty, the first time I used it, how much did I have to squeeze it, but my face is so big???",negative,28,False,
+DATA_PART4,22,"Buy 345, send 147, don't pay attention, so I applied it for the first few days and felt my skin. Business is not good Or fake shop.",negative,27,False,authenticity
+DATA_PART4,23,"Original, might be worth it. But the price and the size of the product. Idk if it is worth.",negative,19,False,"service_only, authenticity"
+DATA_PART4,24,"I'm disappointed with the packaging. No bubble wrap. Only put inside a black plastic bag. The box was torn. The tube was squeezed. I knew that I paid for a cheap price during 11.11 sales, but this is not how you should ship out the product. I wont purchase with this shop anymore.",negative,54,False,service_only
+DATA_PART4,25,Hv used 4th tube of 345. The product itself good and its my first time buy from this seller. Really bad packaging. Nasib baik tak rosak dalam. Will not repeat/recommend to buy here. Poor packaging.,negative,36,False,"service_only, non_english"
+DATA_PART4,26,"Pleaseee this makes my skin even worst, I tried it first in my other parts of skin it wasn't irritating at all but when I tried it in my face for just once a day it got worst, I have very sensitive skin type and now you ruined my confidence even more it got worst please refund my money. I waited few weeks before doing this review so I can try the product and it was BAD.",negative,77,False,
+DATA_PART4,27,"The goods arrived to kemik2, the goods are expensive, at least 2 of them are bubble wrap.. the way of packaging is correct. The good fate of the item is not broken. Bann is a seller like this for more or less goods. I bought cheap items even with bubble wrap.",negative,51,False,"service_only, non_english"
+DATA_PART4,28,nag ka rashes and pigmentation yun skin ko 3days ko na ginagamit mas palala ng palala yun rashes nag stop ako.. medyo humupa na yun rashes di ako hiyang sa cream na 345 Dr. Althea.. sayang pera ko ang mahal mahal pa naman... FAKE PALA ITONG NABILI KO DITO SA SHOP NA ITO NAG BASA BASA AKO NG MGA RATINGS HUHUH... KAYA PALA SOBRANG KATI SA MUKHA KO.,negative,68,False,"authenticity, non_english"
+DATA_PART4,29,"Minus points on packaging. Item arrived with dents. I'm sure once I opened the tube, the content will overflow.",negative,19,False,service_only
+DATA_PART5,1,"I notice redness in my face after using it. Super fake! Made my skin burn. If only i can give negative star, i will. Note that they give some buyer authentic and then a fake ones.. And you can't do anything coz they will claim it's authentic, and shopee help center can't help you either! A total waste of money!!!",negative,60,False,authenticity
+DATA_PART5,2,Not so effective for me. bakit kaya hype to.,negative,9,False,non_english
+DATA_PART5,3,at least put in some bubble wrap..... It's not a cheap thing.,negative,12,False,service_only
+DATA_PART5,4,not good!!!! gave me closed comedomes and pimples... and also rashes !!! don't buy this girlies.,negative,15,False,
+DATA_PART5,5,"When the product is compared to the product holder in front of the cosmetic shop, it is generally loud. The legal ingredients of the details and details don't match.",negative,29,False,service_only
+DATA_PART5,6,"The package arrived very badly When I saw the packaging, I thought it was fake. It didn't come in a box very well. Price is not cheap.",negative,27,False,"service_only, authenticity"
+DATA_PART5,7,"I've bought this mois many times tpi kat other sellers tpi dorang hbs stock, so I try to buy it here, tpi huru hara right in the packaging, it's not like before 2 I bought it, the fate doesn't leak, this mois bottle, Pls pack it well, if you want to get 5 stars, it's immediately tkde safety or 2, just go in the package, if you get stepped on by courier, confirm it's broken.",negative,75,False,"service_only, non_english"
+DATA_PART5,8,Not wrapped in bubble wrap. came dented dented. Just ordered for the first time Usually buy at the big shop Probably Korean. Send it directly. Let's compare the meat and it's the same.,negative,33,False,service_only
+DATA_PART5,9,"product broken when received, wanted to raise a refund request but need return which felt redundant for a skincare product.",negative,20,False,
+DATA_PART5,10,Received incorrect items from that My order is a cream dr althea 345 but I received perfume.,negative,17,False,service_only
+DATA_PART5,11,"Item packing error and seller's poor communication. I was supposed to receive 2 units of the relief cream, but the seller sent 1 relief cream and 1 barrier cream. Mistakes happen, but I texted the chat helper immediately and even followed up again, yet the seller remains completely unresponsive. Please improve your customer service and check your inventory before shipping.",negative,60,False,
+DATA_PART5,12,"However, the product is used in good condition. But the packaging is very bad, it should be improved instead of the box boxed well.",negative,24,False,
+DATA_PART5,13,"What's with the lousy packaging?? Shipment was fulfilled by Shopee! You could've used honeycomb paper if you don't want to use bubble wrap. Look at the product's condition upon opening the package, all squished and smooshed, even has a leak!! How disappointing.",negative,42,False,service_only
+DATA_PART5,14,"This is my first time buying from the official store. Before this, I only bought from other stores. I'm really disappointed because the product arrived without any bubble wrap. As you can see in the picture, the cap is broken. Luckily, no product spilled. If you don't want to use bubble wrap, at least please use a box to pack the product properly. Thank you.",negative,65,False,service_only
+DATA_PART5,15,"Listen to the good product, yes. But can you improve the packaging, the item is not cheap? 500 per tube, why not invest in the box? Sent in a random envelope and opened. The tube is dented Very angry, feels like a lot of customers. The tube is really dented. I saw a lot of customers reviewing like this too. The brand is not improved at all. If you haven't seen the importance here, it's hard to be there.",negative,79,False,
+DATA_PART5,16,"This is the packaging cream, the price is more than 700 baht Can't you pack it in a good box? What about cost? Should be improved I've ordered 3 times like this 2 times. Everything is fine and the packaging is so bad Like a tube cream 30 baht Should be fixed.",negative,52,False,region_signal
+DATA_PART5,17,Seller takde effort langsung utk pack properly. u deserve 1 star.,negative,11,False,"service_only, non_english"
+DATA_PART5,18,the box wasn't wrapped properly. the tube already dented. very frustrating!,negative,11,False,service_only
+DATA_PART5,19,pakai 2 hari tapi naik jerawat besar2 nasib try yg 15ml jer.. nak jual murah2 la sbb tak sesuai..,negative,19,False,non_english
+DATA_PART5,20,"This product is definitely not for everyone. I've been using it for a few weeks now, bago ako mag bigay ng review, and honestly, most of the reviews are true. While using this product, I started getting pimples. At first, I gave it a try and thought maybe my skin was just reacting to a new product, so I continued using it. But days later, I still kept getting more pimples. It's such a shame because the product is quite expensive. Unfortunately, it just didn't work well for my skin. imbis na glass skin, iba yun result sakin.",negative,98,False,non_english
+DATA_PART5,21,"Long wait for product A week, when I received it, the product was dented. Box dented Shipping is not good at all. Very badly bad.",negative,25,False,service_only
+DATA_PART5,22,butas pa ubos agad kakakhia Ing. i dont know.,negative,9,False,non_english
+DATA_PART5,23,The box is quite damaged when it arrived. The product inside is also pressed by force thus damaging the item more.,negative,21,False,service_only
+DATA_PART5,24,Not sure if it's genuine or not. Some point of the box is not the same as the one bought in watson.,negative,22,False,"service_only, authenticity"
+DATA_PART5,25,"Packed in an envelope, no shockproof, messy box Cream tube collapses Order this time is enough.",negative,16,False,service_only
+DATA_PART5,26,Incomplete delivery shop Inform the shop + the shop and tell them to press return And then refund is want something don't want a refund.,negative,24,False,service_only
+DATA_PART5,27,"Received incomplete product Admin can solve the problem just press to get a refund But buyers cannot press products at the same price As for the price difference, the added products are quite high. Because at first the shop had a flash sale and used a code from shopee, the shop packed the wrong product. Then the buyer is wrong Why do you have to order new products at a more expensive price?",negative,73,False,service_only

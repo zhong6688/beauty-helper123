@@ -1,0 +1,17 @@
+review_id,platform,product_name,review_text,label,source,predicted
+B026,unknown,The Ordinary (serum),I think I got a bad batch. The color is yellowish compared to my previous purchase which was white. It produces suds when applied and does not sting as it usually does.,negative,batch2,positive
+B031,unknown,The Ordinary (serum),Skin texture like sandpaper. Skin feels scaly like fish.,negative,batch2,positive
+B040,unknown,CeraVe cream,I have very dry rosacea skin that peeled off every day. However since I apply a thicker layer on my face. My skin has stopped peeling.,positive,batch3,negative
+B080,unknown,CeraVe cream,"First time ordering the CeraVe Moisturising cream, find out that's without protector seal?",negative,batch4,positive
+B081,unknown,CeraVe cream,"I dont like this very much. It has a very weird feeling if sweating, and I weirdly sweat after applying this product even after shower on in room with ac.",negative,batch4,positive
+B084,unknown,CeraVe cream,Not moisturising enough (if you have very dry skin).,negative,batch4,positive
+B085,unknown,CeraVe cream,The manufacture date is 25/4/2024 1 year ago!,negative,batch4,positive
+B088,unknown,Dr Althea 345,"My skin has been using it for 5 days and has a lot of red and red acne, dry skin applying 1 thin layer using the same bottle of mist 345 is really bad huhu.",negative,batch4,positive
+B090,unknown,CeraVe cream,"I feel like the cream tube is empty, the first time I used it, how much did I have to squeeze it, but my face is so big???",negative,batch4,positive
+B094,unknown,Dr Althea 345,not good!!!! gave me closed comedomes and pimples... and also rashes !!! don't buy this girlies.,negative,batch5,positive
+B097,unknown,Dr Althea 345,"However, the product is used in good condition. But the packaging is very bad, it should be improved instead of the box boxed well.",negative,batch5,positive
+B099,unknown,Torriden,"Doesn't absorb well. Face feels quite sticky after application. Regretted buying because of 'good' reviews. Should have just continued with Innisfree, at least its products absorb well and don't have the sticky feeling on my face.",negative,torriden,positive
+B101,unknown,Torriden,My skin breakout badly with small bumps all of a sudden. Also i ended with lots of acne now. Not suitable for sensitive skin with oily people.,negative,torriden,positive
+B102,unknown,Torriden,Delivery was fast. Cream however was not suitable for my face. Customer service is not helpful as well. Disappointed.,negative,torriden,positive
+B110,unknown,Dr Reju-All,Bought this for my son who has sensitive & acne prone skin. It causes irritation to his skin.,negative,rejuall,positive
+B119,unknown,Dr Reju-All,Has been using Dr. Rejuall PD3 PDRN. I like the non-sticky of the texture and it is also light weight.,positive,rejuall,negative

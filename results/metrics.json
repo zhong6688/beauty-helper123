@@ -1,0 +1,77 @@
+{
+  "rows": 121,
+  "class_counts": {
+    "positive": 82,
+    "negative": 39
+  },
+  "seed": 42,
+  "data_file": "data/reviews_labeled.csv",
+  "models": {
+    "baseline_majority": {
+      "holdout_n": 25,
+      "holdout_accuracy": 0.68,
+      "holdout_f1_macro": 0.4048,
+      "holdout_confusion_matrix_rows_true_cols_pred": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "cv_folds": 5,
+      "cv_accuracy_mean": 0.6777,
+      "cv_accuracy_std": 0.0162,
+      "cv_f1_macro_mean": 0.4039,
+      "grouped_cv_n_products": 5,
+      "grouped_cv_accuracy_mean": 0.5924,
+      "grouped_cv_accuracy_std": 0.3214
+    },
+    "word_tfidf_lr": {
+      "holdout_n": 25,
+      "holdout_accuracy": 0.92,
+      "holdout_f1_macro": 0.9008,
+      "holdout_confusion_matrix_rows_true_cols_pred": [
+        [
+          6,
+          2
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "cv_folds": 5,
+      "cv_accuracy_mean": 0.8433,
+      "cv_accuracy_std": 0.047,
+      "cv_f1_macro_mean": 0.7852,
+      "grouped_cv_n_products": 5,
+      "grouped_cv_accuracy_mean": 0.6633,
+      "grouped_cv_accuracy_std": 0.2569
+    },
+    "word_char_tfidf_lr": {
+      "holdout_n": 25,
+      "holdout_accuracy": 0.88,
+      "holdout_f1_macro": 0.8571,
+      "holdout_confusion_matrix_rows_true_cols_pred": [
+        [
+          6,
+          2
+        ],
+        [
+          1,
+          16
+        ]
+      ],
+      "cv_folds": 5,
+      "cv_accuracy_mean": 0.8683,
+      "cv_accuracy_std": 0.0461,
+      "cv_f1_macro_mean": 0.8256,
+      "grouped_cv_n_products": 5,
+      "grouped_cv_accuracy_mean": 0.7579,
+      "grouped_cv_accuracy_std": 0.1644
+    }
+  }
+}

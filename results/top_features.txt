@@ -1,0 +1,5 @@
+Most NEGATIVE features:
+not (-0.72), described (-0.46), as described (-0.46), not as (-0.46), but (-0.45), made (-0.41), me (-0.39), fake (-0.37), item not (-0.34), much (-0.33), face (-0.32), you (-0.32), disappointed (-0.32), from (-0.31), causes (-0.31)
+
+Most POSITIVE features:
+skin (0.55), for (0.47), good (0.46), delivery (0.41), dry (0.37), and (0.36), fast delivery (0.36), use (0.33), is (0.32), good for (0.32), fast (0.32), love (0.31), purchase (0.30), texture (0.30), cream (0.29)

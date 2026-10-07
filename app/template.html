@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Beauty Helper · Find a face moisturizer</title>
+<style>
+:root{
+  --bg:#f7f4f2; --card:#ffffff; --ink:#26232a; --muted:#6a6470; --line:#e8e2de; --accent:#8a3b5c; --accent-ink:#ffffff; --soft:#f6ecf0;
+  --ok:#1e7a46; --ok-bg:#e5f4ea; --no:#b3261e; --no-bg:#fbe9e7; --warn:#8a5a00; --warn-bg:#fff3d6;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#17141a; --card:#201c24; --ink:#efeaf0; --muted:#a79fae; --line:#312b37; --accent:#e08bb0; --accent-ink:#2a1020; --soft:#2a2030;
+    --ok:#6fd19a; --ok-bg:#16301f; --no:#ff9b92; --no-bg:#3a1a18; --warn:#f2c566; --warn-bg:#3a2d10;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#17141a; --card:#201c24; --ink:#efeaf0; --muted:#a79fae; --line:#312b37; --accent:#e08bb0; --accent-ink:#2a1020; --soft:#2a2030;
+  --ok:#6fd19a; --ok-bg:#16301f; --no:#ff9b92; --no-bg:#3a1a18; --warn:#f2c566; --warn-bg:#3a2d10;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;font-size:16px}
+.wrap{max-width:900px;margin:0 auto;padding:20px 16px 56px}
+h1{margin:0;font-size:1.55rem} header p{margin:.25rem 0 0;color:var(--muted);font-size:.92rem}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.pill{display:inline-block;font-size:.78rem;padding:2px 10px;border-radius:99px;background:var(--soft);color:var(--accent);border:1px solid var(--line)}
+nav{display:flex;gap:4px;margin:18px 0 14px;border-bottom:1px solid var(--line);overflow-x:auto}
+nav button{background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);font:inherit;padding:10px 14px;cursor:pointer;white-space:nowrap}
+nav button[aria-selected="true"]{color:var(--accent);border-bottom-color:var(--accent);font-weight:600}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin-bottom:14px}
+.card h2{margin:0 0 8px;font-size:1.08rem} .card h3{margin:14px 0 6px;font-size:.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.muted{color:var(--muted);font-size:.88rem}
+textarea,input[type=number],select,input[type=search]{font:inherit;padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink)}
+textarea{width:100%;resize:vertical;min-height:70px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px}
+button.primary{background:var(--accent);color:var(--accent-ink);border:0;border-radius:10px;padding:10px 22px;font:inherit;font-weight:600;cursor:pointer}
+button.primary:disabled{opacity:.5;cursor:default}
+button.ghost,select.ghost{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 12px;font:inherit;font-size:.88rem;cursor:pointer}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{background:var(--soft);border:1px solid var(--line);color:var(--ink);border-radius:99px;padding:4px 12px;font:inherit;font-size:.85rem;cursor:pointer;text-align:left}
+.pick{border:2px solid var(--accent);border-radius:12px;padding:14px 16px;margin-bottom:10px;background:var(--soft)}
+.pick h2{margin:0;font-size:1.15rem}
+.price{font-weight:700;color:var(--accent)}
+.quote{border-left:4px solid var(--accent);padding:6px 12px;margin:8px 0;background:var(--soft);border-radius:0 8px 8px 0;font-size:.93rem}
+.tag{font-size:.72rem;padding:1px 8px;border-radius:99px;margin-left:6px}
+.tag.p{background:var(--ok-bg);color:var(--ok)} .tag.n{background:var(--no-bg);color:var(--no)}
+.notice{background:var(--warn-bg);color:var(--warn);padding:8px 12px;border-radius:8px;font-size:.88rem;margin:8px 0}
+.danger{background:var(--no-bg);color:var(--no);padding:8px 12px;border-radius:8px;font-size:.9rem;margin:8px 0}
+ul.tight{margin:4px 0;padding-left:1.2rem}
+details{margin-top:10px} summary{cursor:pointer;color:var(--muted);font-size:.9rem}
+.thinking{display:flex;align-items:center;gap:10px;color:var(--muted)}
+.spin{width:16px;height:16px;border:2px solid var(--line);border-top-color:var(--accent);border-radius:50%;animation:sp 1s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}} @media (prefers-reduced-motion: reduce){.spin{animation:none}}
+.tablewrap{overflow-x:auto} table{border-collapse:collapse;width:100%;font-size:.86rem;min-width:620px}
+th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top} th{color:var(--muted);font-weight:600;font-size:.8rem}
+.ok-t{color:var(--ok);font-weight:700} .no-t{color:var(--no);font-weight:700}
+.bar{height:10px;background:var(--line);border-radius:99px;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:var(--accent);width:0;transition:width .3s}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:10px 0}
+.kpi{background:var(--soft);border-radius:10px;padding:10px 12px}.kpi b{display:block;font-size:1.3rem;color:var(--accent)}.kpi span{font-size:.78rem;color:var(--muted)}
+.flow{display:flex;flex-direction:column;margin:8px 0}.node{border-radius:10px;padding:10px 14px;border:1.5px solid var(--line);background:var(--card);font-size:.92rem}
+.node small{display:block;color:var(--muted);font-size:.78rem}.node.code{border-color:var(--accent);background:var(--soft)}.node.llm{border-color:var(--warn);background:var(--warn-bg)}.node.data{border-color:var(--muted)}
+.arrow{text-align:center;color:var(--muted);line-height:1.3}
+.disclaimer{font-size:.8rem;color:var(--muted);margin-top:18px;text-align:center}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>💄 Beauty Helper</h1>
+    <p>Tell me your skin type and budget; I recommend a face moisturizer and show the real reviews behind it.</p>
+    <div class="badges"><span class="pill" id="kbLabel"></span><span class="pill" id="aiLabel">AI: checking…</span></div>
+  </header>
+  <nav role="tablist" aria-label="Sections">
+    <button role="tab" aria-selected="true" data-tab="ask">Ask</button>
+    <button role="tab" aria-selected="false" data-tab="products">Products</button>
+    <button role="tab" aria-selected="false" data-tab="clf">Review classifier</button>
+    <button role="tab" aria-selected="false" data-tab="eval">Evaluation</button>
+    <button role="tab" aria-selected="false" data-tab="about">About</button>
+  </nav>
+
+  <section id="tab-ask">
+    <div class="card">
+      <textarea id="q" placeholder="e.g. I have oily skin, live in humid Singapore, and want a light moisturizer under S$40" aria-label="Describe what you need"></textarea>
+      <div class="row">
+        <label class="muted">Skin type
+          <select id="skin"><option value="auto">detect from my message</option><option value="oily">oily</option><option value="dry">dry</option><option value="sensitive">sensitive</option><option value="combination">combination</option><option value="acne-prone">acne-prone</option></select></label>
+        <label class="muted">Budget S$ <input id="budget" type="number" min="1" step="1" style="width:90px" placeholder="any"></label>
+        <button class="primary" id="askBtn">Recommend</button>
+      </div>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div id="result"></div>
+  </section>
+
+  <section id="tab-products" class="hidden">
+    <div class="card"><h2>Knowledge base</h2>
+      <p class="muted">The only products the assistant can recommend. Prices are what the author saw on Shopee Singapore on the date shown, during a sale, and change often. Review counts are reviews in this knowledge base, not all reviews of the product.</p>
+      <div class="tablewrap"><table><thead><tr><th>Product</th><th>Price</th><th>Skin types on the page</th><th>Main claim (brand)</th><th>Reviews</th></tr></thead><tbody id="prodRows"></tbody></table></div>
+    </div>
+  </section>
+
+  <section id="tab-clf" class="hidden">
+    <div class="card"><h2>Review sentiment classifier (Part 1)</h2>
+      <p class="muted">A scikit-learn model (word and character TF-IDF with logistic regression) trained on 121 hand-labeled reviews about products, running here in your browser. It reads whether a review about a product is positive or negative.</p>
+      <textarea id="clfText" placeholder="Paste or type a review, e.g. 'Light and not sticky, no breakouts for me'"></textarea>
+      <div class="row"><button class="primary" id="clfBtn">Classify</button></div>
+      <div class="chips" id="clfChips"></div>
+      <div id="clfOut"></div>
+      <p class="muted" style="margin-top:12px">Limits: small training set; in testing it missed about a third of negative reviews and did better on products it had seen than on new ones. It is used here to tag knowledge-base reviews that have no hand label.</p>
+    </div>
+  </section>
+
+  <section id="tab-eval" class="hidden">
+    <div class="card"><h2>Evaluation (14 scenario questions)</h2>
+      <p class="muted">Each question runs the full pipeline. Automatic checks: the right kind of answer (recommend, ask for more information, decline, no match), a pick that fits the skin type and budget on the product pages, at least one verified review quote, and a doctor/pharmacist notice when a medical condition is mentioned. You can override any row with your own Pass/Fail after reading the answer. Target: 80% pass.</p>
+      <div id="evalNote" class="notice hidden"></div>
+      <div class="row"><button class="primary" id="evalBtn">Run evaluation</button><button class="ghost" id="evalStop" disabled>Stop</button><button class="ghost hidden" id="evalDl">Download results (JSON)</button></div>
+      <div class="bar"><i id="evalBar"></i></div><div class="muted" id="evalProg"></div>
+      <div class="kpis" id="kpis"></div>
+    </div>
+    <div class="card"><div class="tablewrap"><table><thead><tr><th>#</th><th>Question</th><th>Expected</th><th>Got</th><th>Auto</th><th>Your verdict</th><th>Final</th></tr></thead><tbody id="evalRows"></tbody></table></div></div>
+  </section>
+
+  <section id="tab-about" class="hidden">
+    <div class="card"><h2>How it works</h2>
+      <div class="flow">
+        <div class="node data">Shopper's message<small>skin type, budget, wishes</small></div><div class="arrow">↓</div>
+        <div class="node code">1. Understand and route (own code)<small>detects skin type, budget, medical mentions; declines other product categories and anti-ageing; asks for the skin type if it is missing</small></div><div class="arrow">↓</div>
+        <div class="node code">2. Retrieve (own code)<small>keeps products within budget whose page lists the skin type; picks review excerpts, always including critical ones</small></div><div class="arrow">↓</div>
+        <div class="node llm">3. Recommend (Claude)<small>sees only those products and excerpts; returns one pick, a short reason, exact quotes, caveats</small></div><div class="arrow">↓</div>
+        <div class="node code">4. Check (own code)<small>pick must be a candidate within budget; every quote must appear word for word in the pick's reviews; sentences with treatment claims or unstated properties (e.g. fragrance-free) are removed</small></div><div class="arrow">↓</div>
+        <div class="node data">Answer<small>price, link and page facts come from the knowledge base, never from the model</small></div>
+      </div>
+    </div>
+    <div class="card"><h2>Know the limits</h2>
+      <ul class="tight">
+        <li>Only a handful of everyday moisturizers are covered (see the Products tab; roughly S$5 to S$42 on the day the prices were seen). Anti-ageing, brightening, sunscreen and makeup are out of scope.</li>
+        <li>Reviews are not a random sample: some were copied in page order, others picked by star filter. Counts of positive and negative reviews do not show how good a product is.</li>
+        <li>A sentiment tag says "hand" when the author labeled the review and "model" when the classifier did.</li>
+        <li>"All skin types" on a product page is not treated as a match for any specific skin type.</li>
+        <li>Brand claims (for example "48-hour hydration") are the brand's, not verified.</li>
+        <li>This is general information, not medical advice. See a doctor or pharmacist for skin conditions, and patch test before first use.</li>
+      </ul>
+    </div>
+  </section>
+  <p class="disclaimer">Beauty Helper is a course project. Information may be wrong or out of date. Not medical advice.</p>
+</div>
+
+<script>__LOGIC__</script>
+<script>
+/* ===== Page code. Logic lives in logic.js (classify, parseNeed, outOfScope, selectCandidates, pickReviews, buildPrompt, verifyAnswer). ===== */
+const KB = __KB__;
+const MODEL = __MODEL__;
+const EVALS = __EVALS__;
+const BH = window.BH;
+const $ = s => document.querySelector(s);
+const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const DISCLAIMER = "AI-generated information, not medical advice. Do a patch test on a small area before first use. Prices were seen on 2026-10-07 during a sale and change often.";
+const EXAMPLES = ["I have oily skin and live in humid Singapore. I want a light moisturizer under S$40.", "Dry skin, my budget is S$15.", "Gift for my mum, she has very dry skin. Around S$50.", "Sensitive skin and I need a fragrance-free moisturizer, up to S$40.", "Which lipstick should I buy?", "I need a moisturizer."];
+let sample = null, askCtl = null, evalCtl = null, evalRows = [];
+const reviewsOf = pid => KB.reviews.filter(r => r.product_id === pid);
+
+async function askClaude(prompt, opts) {
+  if (sample.json) return sample.json(prompt, opts);
+  const { text } = await sample(prompt, opts);
+  const m = text.match(/\{[\s\S]*\}/); if (!m) throw { code: "invalid_json", message: "no JSON" };
+  return JSON.parse(m[0]);
+}
+
+/** Whole pipeline for one message. Returns an object describing what to show; never throws for expected situations. */
+async function recommend(text, opts, run) {
+  const t0 = performance.now();
+  const need = BH.parseNeed(text, opts);
+  const res = { text, need, status: null, ms: 0 };
+  const done = o => Object.assign(res, o, { ms: performance.now() - t0 });
+  const scope = BH.outOfScope(text);
+  if (scope) return done({ status: "out_of_scope", message: "I can only recommend face moisturizers from my small knowledge base (" + KB.products.length + " products). Anti-ageing, brightening, sunscreen and makeup or other product types are not covered, so I can't help with this request." });
+  if (!need.skin.length) return done({ status: "needs_info", message: "To recommend a moisturizer I need your skin type: oily, dry, sensitive or combination (you can also say acne-prone). Type it in your message or pick it in the box above. A budget in S$ helps too." });
+  const cands = BH.selectCandidates(KB, need, text);
+  if (!cands.length) {
+    const fits = KB.products.filter(p => need.skin.some(s => BH.skinTagsOf(p).has(s))).sort((a, b) => a.price_sgd - b.price_sgd);
+    const msg = fits.length ? "No product in my knowledge base lists " + need.skin.join(" / ") + " skin within S$" + need.budget + ". The cheapest one that does is " + fits[0].product_name + " at S$" + fits[0].price_sgd + "." : "No product in my knowledge base lists " + need.skin.join(" / ") + " skin.";
+    return done({ status: "no_match", message: msg });
+  }
+  const rbp = Object.fromEntries(cands.map(p => [p.product_id, BH.pickReviews(KB, p, text, 5)]));
+  if (!sample) return done({ status: "no_ai", candidates: cands });
+  const prompt = BH.buildPrompt(text, need, cands, rbp);
+  const raw = await askClaude(prompt, { signal: run && run.signal, modelTier: "default", ...(run && run.fresh ? { cache: false } : {}) });
+  const tokens = { inTok: Math.ceil(prompt.length / 4), outTok: Math.ceil(JSON.stringify(raw || {}).length / 4) };   // estimates: characters / 4
+  const v = BH.verifyAnswer(raw, { candidates: cands, need, reviewsByProduct: rbp });
+  return done({ status: v.status === "recommend" ? "recommend" : "no_match", candidates: cands, verified: v, tokens, message: v.status === "recommend" ? "" : (v.reason || "None of the candidate products fits well enough.") });
+}
+function errCopy(e) {
+  const c = e && e.code;
+  if (c === "cancelled") return "";
+  if (c === "not_granted") return "You have not allowed this page to use Claude, so it cannot write a recommendation.";
+  if (c === "rate_limited") return "Too many requests or usage limit reached. Please try again later.";
+  if (c === "session_expired") return "Your session expired. Please sign in again.";
+  if (c === "invalid_json") return "The AI's answer was not in the expected format. Please try again.";
+  return "The AI did not respond. Please try again later.";
+}
+
+/* ---------- rendering ---------- */
+function counts(pid) { const r = reviewsOf(pid); return { n: r.length, pos: r.filter(x => x.sentiment === "positive").length, neg: r.filter(x => x.sentiment === "negative").length }; }
+function tagHtml(r) { return `<span class="tag ${r.sentiment === "positive" ? "p" : "n"}">${esc(r.sentiment)} (${esc(r.sentiment_source)})</span>`; }
+function noticesHtml(res) {
+  let h = "";
+  if (res.need.medical) h += `<div class="danger">You mentioned a medical condition or allergy. A doctor or pharmacist should advise you; this tool only describes moisturizers and cannot give medical advice.</div>`;
+  if (res.need.spf) h += `<div class="notice">None of the products in this knowledge base contains sunscreen. Use a separate sunscreen if you need one.</div>`;
+  return h;
+}
+function resultHtml(res) {
+  if (res.status === "out_of_scope" || res.status === "needs_info" || res.status === "no_match" && !res.verified) return `<div class="card">${noticesHtml(res)}<p>${esc(res.message)}</p></div>`;
+  if (res.status === "no_ai") return `<div class="card"><div class="notice">Claude is not available in this environment, so no recommendation can be written. These products match your skin type and budget:</div>${res.candidates.map(p => `<p><b>${esc(p.product_name)}</b> · <span class="price">S$${p.price_sgd}</span></p>`).join("")}</div>`;
+  const v = res.verified;
+  if (res.status === "no_match") return `<div class="card">${noticesHtml(res)}<p>${esc(res.message)}</p>${v && v.notes.length ? `<div class="notice">${v.notes.map(esc).join("<br>")}</div>` : ""}</div>`;
+  const p = v.pick, c = counts(p.product_id);
+  let h = noticesHtml(res);
+  h += `<div class="card"><div class="pick"><h2>${esc(p.product_name)}</h2><div><span class="price">S$${p.price_sgd}</span> <span class="muted">(${esc(p.size)}; seen ${esc(p.price_date)} on Shopee Singapore)</span></div>
+    <div class="muted">Skin types listed on the product page: ${esc(p.skin_types_on_page)}</div>
+    <div class="muted">Based on ${c.n} reviews in the knowledge base (${c.pos} positive, ${c.neg} negative; not a random sample)</div>
+    ${p.url ? `<div><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">Product page on Shopee</a></div>` : ""}</div>`;
+  if (v.reason) h += `<h3>Why</h3><p>${esc(v.reason)}</p>`;
+  if (v.quotes.length) h += `<h3>What reviewers say (verified word for word)</h3>` + v.quotes.map(q => `<div class="quote">“${esc(q.quote)}” ${tagHtml(q.review)}<div class="muted">review ${esc(q.review.id)}</div></div>`).join("");
+  else h += `<div class="notice">No review quote could be verified, so this recommendation rests on the product page only.</div>`;
+  if (v.caveats.length) h += `<h3>Good to know</h3><ul class="tight">${v.caveats.map(x => `<li>${esc(x)}</li>`).join("")}</ul>`;
+  if (v.alternatives.length) h += `<h3>Other options</h3><ul class="tight">${v.alternatives.map(a => `<li><b>${esc(a.product.product_name)}</b> · S$${a.product.price_sgd}${a.note ? " — " + esc(a.note) : ""}</li>`).join("")}</ul>`;
+  if (v.notes.length) h += `<div class="notice">Checks applied: ${v.notes.map(esc).join(" ")}</div>`;
+  h += `<details><summary>Products considered (${res.candidates.length})</summary><ul class="tight">${res.candidates.map(x => `<li>${esc(x.product_name)} · S$${x.price_sgd}</li>`).join("")}</ul></details>`;
+  h += `<p class="muted" style="margin-top:10px">${esc(DISCLAIMER)} (${(res.ms / 1000).toFixed(1)} s${res.tokens ? `, about ${res.tokens.inTok} input and ${res.tokens.outTok} output tokens, estimated as characters ÷ 4` : ""})</p></div>`;
+  return h;
+}
+async function doAsk() {
+  const text = $("#q").value.trim(); if (!text) return;
+  if (askCtl) askCtl.abort();
+  askCtl = new AbortController(); const ctl = askCtl;
+  $("#askBtn").disabled = true;
+  $("#result").innerHTML = `<div class="card thinking"><div class="spin"></div><span>Finding a match…</span><button class="ghost" id="stopAsk" style="margin-left:auto">Stop</button></div>`;
+  $("#stopAsk").onclick = () => ctl.abort();
+  try {
+    const res = await recommend(text, { skin: $("#skin").value, budget: $("#budget").value }, { signal: ctl.signal });
+    $("#result").innerHTML = resultHtml(res);
+  } catch (e) {
+    const msg = errCopy(e);
+    $("#result").innerHTML = msg ? `<div class="card"><div class="notice">${esc(msg)}</div></div>` : `<div class="card muted">Stopped.</div>`;
+  } finally { $("#askBtn").disabled = false; }
+}
+
+/* ---------- products and classifier tabs ---------- */
+function renderProducts() {
+  $("#prodRows").innerHTML = KB.products.map(p => { const c = counts(p.product_id);
+    return `<tr><td><b>${esc(p.product_name)}</b><br><span class="muted">${esc(p.platform)} · ${esc(p.size)}</span>${p.url ? `<br><a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">page</a>` : ""}</td><td>S$${p.price_sgd}<br><span class="muted">${esc(p.price_date)}</span></td><td>${esc(p.skin_types_on_page)}</td><td>${esc(p.main_claim)}</td><td>${c.n}<br><span class="muted">${c.pos} pos, ${c.neg} neg</span></td></tr>`; }).join("");
+}
+const CLF_EXAMPLES = ["Light and not sticky, my skin feels hydrated and no breakouts", "Made my skin red and itchy after two days", "Delivery was fast but the cream broke me out", "Not as described, very disappointed"];
+function doClassify(text) {
+  const t = (text || $("#clfText").value).trim(); if (!t) return;
+  const p = BH.classify(MODEL, t);
+  $("#clfOut").innerHTML = `<div class="card" style="margin-top:12px"><b>${p >= 0.5 ? "Positive" : "Negative"}</b> review · probability positive ${(p * 100).toFixed(0)}%<div class="bar"><i style="width:${(p * 100).toFixed(0)}%"></i></div><div class="muted">Close to 50% means the model is unsure. It only reads the words of the review.</div></div>`;
+}
+
+/* ---------- evaluation ---------- */
+const pct = (a, b) => b ? Math.round(a / b * 100) + "%" : "—";
+function autoCheck(e, r) {
+  const got = r.status;
+  const statusOK = e.expect_status === "any" ? (got === "recommend" || got === "no_match" || got === "needs_info") : (got === e.expect_status);
+  const pickOK = got === "recommend" && e.eligible.length ? e.eligible.includes(r.verified.pick.product_id) : true;
+  const grounded = got === "recommend" ? r.verified.quotes.length >= 1 : true;
+  const medOK = e.needs_medical_notice ? r.need.medical === true : true;
+  return { statusOK, pickOK, grounded, medOK, pass: statusOK && pickOK && grounded && medOK };
+}
+function finalOf(row) { return row.manual === "pass" ? true : row.manual === "fail" ? false : (row.auto ? row.auto.pass : null); }
+function renderEval() {
+  $("#evalRows").innerHTML = evalRows.map((row, i) => {
+    const e = row.e, r = row.res, a = row.auto, f = finalOf(row);
+    const got = row.err ? esc(row.err) : r ? esc(r.status) + (r.verified && r.verified.pick ? `<br><span class="muted">${esc(r.verified.pick.product_id)} ${esc(r.verified.pick.product_name.slice(0, 28))}</span>` : "") : "…";
+    const mark = v => v == null ? "—" : v ? `<span class="ok-t">✓</span>` : `<span class="no-t">✕</span>`;
+    return `<tr><td>${e.id}</td><td>${esc(e.question)}<br><span class="muted">${esc(e.note)}</span></td><td>${esc(e.expect_status)}${e.eligible.length ? `<br><span class="muted">${esc(e.eligible.join(", "))}</span>` : ""}</td><td>${got}${r && r.verified && r.verified.notes.length ? `<br><span class="muted">${esc(r.verified.notes.join(" "))}</span>` : ""}${r ? `<details><summary>read the answer</summary>${resultHtml(r)}</details>` : ""}</td><td>${mark(a ? a.pass : null)}</td>
+      <td><select class="ghost" data-i="${i}"><option value=""${!row.manual ? " selected" : ""}>—</option><option value="pass"${row.manual === "pass" ? " selected" : ""}>Pass</option><option value="fail"${row.manual === "fail" ? " selected" : ""}>Fail</option></select></td><td>${mark(f)}</td></tr>`; }).join("");
+  const done = evalRows.filter(r => r.auto);
+  const rec = done.filter(r => r.res.status === "recommend");
+  const proposed = rec.reduce((s, r) => s + r.res.verified.proposedQuotes, 0), rejected = rec.reduce((s, r) => s + r.res.verified.rejectedQuotes, 0);
+  const kp = [["Pass rate (final)", pct(done.filter(r => finalOf(r)).length, done.length)], ["Right kind of answer", pct(done.filter(r => r.auto.statusOK).length, done.length)],
+    ["Pick fits skin type and budget", pct(rec.filter(r => r.auto.pickOK).length, rec.length)], ["Answers with a verified quote", pct(rec.filter(r => r.auto.grounded).length, rec.length)],
+    ["Quotes rejected as not verbatim", rejected + " of " + proposed], ["Claims removed by checks", String(rec.reduce((s, r) => s + (r.res.verified.medicalClaimBlocked ? 1 : 0) + r.res.verified.unsupportedClaimsBlocked, 0))],
+    ["Average time", done.length ? (done.reduce((s, r) => s + r.res.ms, 0) / done.length / 1000).toFixed(1) + " s" : "—"],
+    ["Estimated tokens per recommendation (in + out)", rec.length && rec.every(r => r.res.tokens) ? Math.round(rec.reduce((s, r) => s + r.res.tokens.inTok + r.res.tokens.outTok, 0) / rec.length).toLocaleString() : "—"]];
+  $("#kpis").innerHTML = kp.map(([n, v]) => `<div class="kpi"><b>${esc(v)}</b><span>${esc(n)}</span></div>`).join("");
+}
+async function runEval() {
+  if (!sample) return;
+  evalCtl = new AbortController(); const ctl = evalCtl;
+  $("#evalBtn").disabled = true; $("#evalStop").disabled = false; $("#evalDl").classList.add("hidden");
+  evalRows = EVALS.map(e => ({ e, res: null, auto: null, manual: "", err: "" })); renderEval();
+  let next = 0, done = 0, stopped = false;
+  const worker = async () => {
+    while (!stopped && !ctl.signal.aborted) {
+      const i = next++; if (i >= evalRows.length) return;
+      const row = evalRows[i];
+      try { row.res = await recommend(row.e.question, {}, { signal: ctl.signal, fresh: true }); row.auto = autoCheck(row.e, row.res); }
+      catch (err) { if (err && err.code === "cancelled") { stopped = true; return; } row.err = "error: " + (err && err.code || "unknown"); if (err && (err.code === "not_granted" || err.code === "rate_limited")) stopped = true; }
+      done++; $("#evalProg").textContent = `Completed ${done} / ${evalRows.length}…`; $("#evalBar").style.width = (done / evalRows.length * 100) + "%"; renderEval();
+    }
+  };
+  $("#evalProg").textContent = "Running…";
+  await Promise.all([worker(), worker()]);
+  $("#evalProg").textContent = (stopped || ctl.signal.aborted) ? "Stopped early; some results are missing." : "Evaluation finished. Read each answer (use the Ask tab with the same question if you want to see it in full) and set your own verdict where you disagree.";
+  $("#evalBtn").disabled = false; $("#evalStop").disabled = true; renderEval();
+  try { const dl = await claude.use("downloads");
+    if (dl) { $("#evalDl").classList.remove("hidden"); $("#evalDl").onclick = async () => { try { await dl.save({ filename: "beauty-helper-eval-results.json", data: JSON.stringify(evalRows.map(r => ({ id: r.e.id, question: r.e.question, expected: r.e.expect_status, eligible: r.e.eligible, got: r.res && r.res.status, pick: r.res && r.res.verified && r.res.verified.pick ? r.res.verified.pick.product_id : null, auto: r.auto, manual: r.manual || null, final_pass: finalOf(r), proposed_quotes: r.res && r.res.verified ? r.res.verified.proposedQuotes : null, rejected_quotes: r.res && r.res.verified ? r.res.verified.rejectedQuotes : null, notes: r.res && r.res.verified ? r.res.verified.notes : null, answer: r.res && r.res.verified ? { reason: r.res.verified.reason, quotes: r.res.verified.quotes.map(q => ({ review_id: q.review.id, quote: q.quote })), caveats: r.res.verified.caveats, alternatives: r.res.verified.alternatives.map(a => ({ product_id: a.product.product_id, note: a.note })) } : (r.res ? { message: r.res.message || null } : null), est_tokens: r.res && r.res.tokens ? r.res.tokens : null, seconds: r.res ? +(r.res.ms / 1000).toFixed(1) : null })), null, 2) }); } catch (e) {} }; }
+  } catch (e) {}
+}
+
+/* ---------- init ---------- */
+document.querySelectorAll("nav button").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll("nav button").forEach(x => x.setAttribute("aria-selected", x === b ? "true" : "false"));
+  ["ask", "products", "clf", "eval", "about"].forEach(t => $("#tab-" + t).classList.toggle("hidden", t !== b.dataset.tab));
+}));
+$("#kbLabel").textContent = `${KB.products.length} moisturizers · ${KB.reviews.length} reviews · prices seen ${KB.products[0].price_date}`;
+$("#chips").innerHTML = EXAMPLES.map(e => `<button class="chip">${esc(e)}</button>`).join("");
+$("#chips").addEventListener("click", e => { if (e.target.classList.contains("chip")) { $("#q").value = e.target.textContent; doAsk(); } });
+$("#clfChips").innerHTML = CLF_EXAMPLES.map(e => `<button class="chip">${esc(e)}</button>`).join("");
+$("#clfChips").addEventListener("click", e => { if (e.target.classList.contains("chip")) { $("#clfText").value = e.target.textContent; doClassify(); } });
+$("#askBtn").addEventListener("click", doAsk);
+$("#q").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); doAsk(); } });
+$("#clfBtn").addEventListener("click", () => doClassify());
+$("#evalBtn").addEventListener("click", runEval);
+$("#evalStop").addEventListener("click", () => { if (evalCtl) evalCtl.abort(); });
+$("#evalRows").addEventListener("change", e => { if (e.target.dataset.i !== undefined) { evalRows[+e.target.dataset.i].manual = e.target.value; renderEval(); } });
+renderProducts(); renderEval();
+(async () => {
+  try { sample = (window.claude && await claude.use("sample")) || null; } catch (e) { sample = null; }
+  $("#aiLabel").textContent = sample ? "AI: Claude available" : "AI: unavailable (no recommendations)";
+  if (!sample) { $("#evalNote").textContent = "Claude is not available in this environment, so the evaluation cannot run."; $("#evalNote").classList.remove("hidden"); $("#evalBtn").disabled = true; }
+})();
+</script>
+</body>
+</html>
